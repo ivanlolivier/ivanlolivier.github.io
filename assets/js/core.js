@@ -358,7 +358,7 @@ var Mi = {
                         type: "POST",
                         url: "https://ivan.iugolin.rocks",
                         data: $(this).serialize(),
-                        success: function(msg) {
+                        complete: function(msg) {
                             if (msg === 'SEND') {
                                 response = '<div class="alert alert-success">Done! Thank you for your message - You will get an answer as soon as possible.';
                             }
