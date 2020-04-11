@@ -358,8 +358,13 @@ var Mi = {
                         type: "POST",
                         url: "https://ivan.iugolin.rocks",
                         data: $(this).serialize(),
-                        complete: function(msg) {
-                            response = '<div class="alert alert-success">Done! Thank you for your message - You will get an answer as soon as possible.</div>';
+                        success: function(msg) {
+                            if (msg === 'SEND') {
+                                response = '<div class="alert alert-success">Done! Thank you for your message - You will get an answer as soon as possible.</div>';
+                            }
+                            else {
+                                response = '<div class="alert alert-danger">Ooops... It seems that we have a problem.</div>';
+                            }
                             $formAlert.html(response);
                             $formAlert.show();
                         }
