@@ -356,7 +356,7 @@ var Mi = {
                 if ($contactForm.valid()){
                     $.ajax({
                         type: "POST",
-                        url: "http://ivan.iugolin.rocks",
+                        url: "https://ivan.iugolin.rocks",
                         data: $(this).serialize(),
                         success: function(msg) {
                             if (msg === 'SEND') {
